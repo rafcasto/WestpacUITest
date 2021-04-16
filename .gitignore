@@ -1,1 +1,3 @@
-/src/main/java/dto/User.java
+# Project exclude paths
+/target/
+/.idea/
