@@ -21,6 +21,7 @@ public class WebLoginPage extends BasePage implements LoginPage {
         FindElement(this.userName).sendKeys(user);
         FindElement(this.password).sendKeys(password);
         FindElement(this.loginButton).click();
+        waitForSeconds();
     }
 
     @Override

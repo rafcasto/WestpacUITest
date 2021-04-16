@@ -23,12 +23,11 @@ public class BasePage {
     public WebElement FindElement(By locator)
     {
         WebDriverWait wait =  new WebDriverWait(driver,10);
-        return  wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return  wait.until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
     }
 
     public String getAlertMessage(By message)
     {
-
         int attempts = 0;
         boolean alertIsPresent = false;
         String alertMessage = null;
@@ -51,7 +50,7 @@ public class BasePage {
         return  alertMessage;
     }
 
-    private void waitForSeconds()
+    public void waitForSeconds()
     {
         try
         {
