@@ -4,11 +4,11 @@ import java.time.LocalTime;
 
 public class User
 {
-    private String username;
-    private String firstName;
-    private String lastName;
-    private String password;
-    private String confirmPassword;
+    protected  String username;
+    protected  String firstName;
+    protected  String lastName;
+    protected  String password;
+    protected  String confirmPassword;
 
     public User()
     {

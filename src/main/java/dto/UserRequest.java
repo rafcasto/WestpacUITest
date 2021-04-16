@@ -23,7 +23,7 @@ public class UserRequest extends BaseResponse
     public void setUsername(String username)
     {
 
-        this.username = transformUserName(username);
+        this.username = username;
     }
 
     public String getFirstName() {
@@ -65,11 +65,5 @@ public class UserRequest extends BaseResponse
         return dateTime.toString().replace(":","").replace(".","");
     }
 
-    private String transformUserName(String userName)
-    {
-        if(userName == null || userName.isEmpty()){
-            return "";
-        }
-        return username + "_" + getRandomNumber();
-    }
+
 }

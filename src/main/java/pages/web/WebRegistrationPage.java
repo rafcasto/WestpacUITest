@@ -46,43 +46,11 @@ public class WebRegistrationPage extends BasePage implements RegistrationPage {
     @Override
     public String readMessage()
     {
-
-
-        return getAlertMessage();
+        return getAlertMessage(message);
     }
 
-    private String getAlertMessage()
-    {
 
-        int attempts = 0;
-        boolean alertIsPresent = false;
-        String alertMessage = null;
-        while (!alertIsPresent && attempts <=3)
-        {
-            waitForSeconds();
 
-            List<WebElement> alerts = driver.findElements(message).
-                    stream().filter(x-> !x.getText().isEmpty()).
-                    collect(Collectors.toList());
 
-            alertIsPresent = !alerts.isEmpty();
-            if(alertIsPresent)
-            {
-                WebElement alert = alerts.stream().findFirst().orElse(null);
-                alertMessage = alert.getText();
-            }
-            attempts++;
-        }
-        return  alertMessage;
-    }
-
-    private void waitForSeconds()
-    {
-        try
-        {
-            Thread.sleep(1000);
-        }catch (Exception ex){}
-
-    }
 
 }

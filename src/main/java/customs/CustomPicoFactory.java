@@ -2,6 +2,7 @@ package customs;
 
 import controllers.ChromeController;
 import controllers.SauceLabController;
+import dto.User;
 import helpers.ReadConfigHelper;
 import pages.RegistrationPage;
 import pages.web.WebLoginPage;
@@ -23,6 +24,7 @@ public class CustomPicoFactory implements ObjectFactory
         addClass(WebNavigationComponent.class);
         addClass(WebRegistrationPage.class);
         addClass(UserRepositoryImpl.class);
+        addClass(User.class);
     }
 
 
