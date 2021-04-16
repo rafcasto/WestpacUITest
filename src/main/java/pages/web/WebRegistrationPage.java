@@ -40,6 +40,11 @@ public class WebRegistrationPage extends BasePage implements RegistrationPage {
     @Override
     public void submitForm()
     {
+        WebElement registrationBtn = driver.findElement(registerBtn);
+        if(!registrationBtn.isEnabled())
+        {
+            return;
+        }
         FindElement(registerBtn).click();
     }
 

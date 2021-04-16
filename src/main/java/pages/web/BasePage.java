@@ -23,7 +23,7 @@ public class BasePage {
     public WebElement FindElement(By locator)
     {
         WebDriverWait wait =  new WebDriverWait(driver,10);
-        return  wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return  wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public String getAlertMessage(By message)

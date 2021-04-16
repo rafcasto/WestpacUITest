@@ -19,7 +19,9 @@ public class Hooks implements En {
     @Before
     public void SetUp()
     {
+
         driver.getDriver().get("https://buggy.justtestit.org/");
+        driver.getDriver().manage().window().maximize();
     }
 
     @After
