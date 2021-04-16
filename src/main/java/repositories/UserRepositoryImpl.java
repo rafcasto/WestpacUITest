@@ -12,8 +12,11 @@ import java.util.Map;
 
 public class UserRepositoryImpl extends BaseRepository implements  UserRepository
 {
-    private ReadConfigHelper readConfigHelper = new ReadConfigHelper();
-
+    private ReadConfigHelper readConfigHelper;
+    public UserRepositoryImpl(ReadConfigHelper readConfigHelper)
+    {
+        this.readConfigHelper = readConfigHelper;
+    }
     public BaseResponse createUser(UserRequest userRequest) {
         String url = readConfigHelper.readEndPointUrl()+"users";
 

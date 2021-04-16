@@ -30,7 +30,7 @@ public class RegistrationSteps implements En
     @Given("User sing up with details")
     public void userSingUpWithDetails(List<User> userList)
     {
-        this.pages.navigationComponent.navigateToProfile();
+        this.pages.navigationComponent.navigateToRegistration();
         userDetails = userList.stream().findFirst().orElse(null);
         this.pages.userDetails = userDetails;
 

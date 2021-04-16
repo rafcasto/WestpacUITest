@@ -18,7 +18,6 @@ public class LoginSteps
         this.userDetails = pages.userDetails;
         this.pages = pages;
     }
-
     @When("User Login to Buggy cars website")
     public void userLoginToBuggyCarsWebsite()
     {

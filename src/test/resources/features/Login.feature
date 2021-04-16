@@ -14,6 +14,7 @@ Feature: Login
     When User Login to Buggy cars website
     Then User is able to see his name on the top nav bar
 
+
   Scenario: User can not login to buggy cars website with wrong password
     When User Login to Buggy cars website with wrong
       | password      |

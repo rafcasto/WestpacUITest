@@ -20,6 +20,7 @@ public class ReadConfigHelper
     public String readSauceLabUserName () {return prop.getProperty("saucelab.username");}
     public String readSauceLabAccessKey(){return prop.getProperty("saucelab.accesskey");}
     public String readRunOnLocal(){return prop.getProperty("runOnLocal");}
+    public String readTestUrl(){return prop.getProperty("test.url");}
 
     private void initProps()
     {
