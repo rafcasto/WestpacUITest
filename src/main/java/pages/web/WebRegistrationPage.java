@@ -46,6 +46,7 @@ public class WebRegistrationPage extends BasePage implements RegistrationPage {
     @Override
     public String readMessage()
     {
+        waitForSeconds();
         return getAlertMessage(message);
     }
 
